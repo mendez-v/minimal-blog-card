@@ -1,0 +1,130 @@
+@font-face {
+  font-family: 'Sora';
+  src: url('./assets/font/Sora-VariableFont_wght.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 800;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, p, figure {
+  margin: 0;
+}
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  vertical-align: middle;
+  font-style: italic;
+}
+
+body {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  font-family: Sora;
+  font-size: 1rem;
+  background-color: var(--clr-4);
+}
+:root {
+  --clr-1: #883AE1;
+  --clr-2: #E6D6FC;
+  --clr-3: #E5EAF0;
+  --clr-4: #FAFAF9;
+  --clr-5: #FFFFFF;
+  --clr-6: #20293A;
+  --clr-7: #6C727F;
+  --radius: .5rem;
+}
+
+.sr-only {
+  inline-size: 1px;
+  block-size: 1px;
+  font-size: 1px;
+  position: absolute;
+  left: -150vw;
+  visibility: hidden; 
+  opacity: 0;
+}
+
+.card {
+  margin: 4rem .5rem;
+  padding: 1rem;
+  inline-size: 80vw;
+  min-inline-size: 300px;
+  max-inline-size: 350px;
+  box-shadow: 0 2rem 6rem hsl(from var(--clr-6) h s l / .15);
+  border: .1rem solid hsl(from var(--clr-6) h s l / .01);
+  border-radius: var(--radius);
+  color: var(--clr-5);
+}
+.card__image {
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.card__body {
+  margin-top: 1.5rem;
+}
+.card__tag {
+  --radius: 2rem;
+  justify-self: start;
+  padding: .5em 1.5em;
+  font-size: .625rem;
+  font-weight: 700;
+  color: var(--clr-1);
+  background-color: var(--clr-2);
+  border-radius: var(--radius);
+}
+.card__title {
+  margin-top: 1.5rem;
+  font-size: 1.125rem;
+  color: var(--clr-6);
+}
+.card__description {
+  margin-top: .5rem;
+  font-size: .875rem;
+  color: var(--clr-7);
+  line-height: 1.6;
+}
+.card__footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: .1rem solid var(--clr-3);
+  color: var(--clr-7);
+}
+.card__attribution {
+  font-size: 0.75rem;
+}
+
+.attribution {
+  margin-top: -3.6rem;
+  padding-block: 1.5em;
+  font-size: .85rem;
+  color: var(--clr-7);
+}
+.attribution__cta {
+  margin-inline: .3rem;
+  color: var(--clr-1);
+  text-underline-offset: .25rem;
+  text-decoration-thickness: .1rem;
+  transition: font-weight .3s ease;
+}
+.attribution__cta:focus-visible {
+  outline-offset: .25rem;
+  outline-color: orange;
+  font-weight: 600;
+}
+
+@media (hover:hover) {
+  .attribution__cta:hover {
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
