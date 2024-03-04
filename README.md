@@ -28,7 +28,7 @@
 
 ## *Built with*
 
-📌 HTML semactic
+📌 Semantic HTML
 
 📌 CSS custom properties
 
